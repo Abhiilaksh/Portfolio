@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="" class="logo" style="margin-left: -70px;">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#home">Resume</a>
+                        <a href="#home">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I am <span>Abhilaksh</span><br> from India</h1>
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, rerum voluptas sint unde quasi et vel similique obcaecati. Recusandae dolorem repellendus iste rem magnam ipsum laboriosam quidem quas quasi ad?
+                    Nisi beatae aperiam unde quod eveniet? Temporibus tempore, laboriosam rerum adipisci iste odio iusto repellat vero aliquam in quas mollitia similique sint cum iure quis quo quasi incidunt enim illum.
+                    Laboriosam ducimus adipisci eligendi? Perspiciatis, doloribus voluptatum. Quasi rerum ducimus animi ab ratione ex, quaerat velit quia harum. Illo suscipit rerum aspernatur officiis facilis impedit cumque voluptate neque a. Delectus!
+                    Laborum rem amet modi omnis facere distinctio maxime ab ut. Fugit doloribus sequi omnis distinctio, consequatur consectetur asperiores ipsum error! Aliquam quaerat neque enim qui obcaecati aliquid officiis tempore maiores.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                    
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces </li>
+                        <li><span>Web Development</span><br>Web app Development </li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Entry Level</span><br>No Experience Till Now </li>
+                        
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-2027</span><br>BTech From Chitkara University Rajpura </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function openTab(tabName){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+        
+</script>  
+</body>
+</html>
